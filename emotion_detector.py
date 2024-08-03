@@ -17,8 +17,11 @@ def detect_emotion(text):
         text=text,
         features=Features(emotion=EmotionOptions())
     ).get_result()
-    return json.dumps(response, indent=2)
 
-if __name__ == "__main__":
-    text_to_analyze = "I am so happy today!"
-    print(detect_emotion(text_to_analyze))
+    emotions = response['emotion']['document']['emotion']
+    formatted_output = {
+        'text': text,
+        'emotions': emotions
+    }
+    return json.dumps(formatted_output, indent=2)
+
