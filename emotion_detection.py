@@ -19,3 +19,11 @@ print(json_string)
 json_data = '{"name": "Jane Doe", "age": 25, "city": "Los Angeles"}'
 data_dict = json.loads(json_data)
 print(data_dict)
+{
+'anger': anger_score,
+'disgust': disgust_score,
+'fear': fear_score,
+'joy': joy_score,
+'sadness': sadness_score,
+'dominant_emotion': '<name of the dominant emotion>'
+}
